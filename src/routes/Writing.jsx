@@ -38,7 +38,7 @@ function Writing() {
         }
     }, [feedback]);
 
-    if (!assignment) return <div>Loading...</div>;
+    if (!writingId || !assignment) return null;
 
     const state = Object.values(writingStateEnum).find(state => state.state === assignment.writingState) || {
         text: '',

@@ -17,7 +17,10 @@ const useWriting = (writingId) => {
     useEffect(() => {
         setIsLoading(true);
         const assignment = writingList.find((item) => item.id === parseInt(writingId));
-        if (!assignment) return;
+        if (!assignment) {
+            setIsLoading(false);
+            return;
+        }
         setAssignment(assignment);
 
         getWriting(cookies.accessToken, writingId)
