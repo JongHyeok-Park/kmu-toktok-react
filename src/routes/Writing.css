@@ -112,8 +112,6 @@
 .writing-content-container > div {
     flex: 1;
     height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 #writing-content,
 #feedback-content {
@@ -258,6 +256,8 @@ element.style {
 
     .writing-content-container > div {
         width: 100%;
+        padding-left: 0;
+        border-left: none;
     }
 
     .writing-content-container > hr {
